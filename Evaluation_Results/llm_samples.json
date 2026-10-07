@@ -1,0 +1,59 @@
+[
+  {
+    "event": "HE-001",
+    "task": "safety_goal",
+    "output": "Safety Goal:\n\nAvoid the hazard caused by the malfunction Total loss of assist torque.\n\nSafe state: assist torque ramped down to zero, EPS warning lamp on, and the driver keeps manual steering.\n\nFTTI: 500 ms\n\n[CITE SG-1, SG-2, [ITM-8]]",
+    "citations_ok": true,
+    "invalid_cites": [],
+    "has_safe_state": true,
+    "has_ftti": true
+  },
+  {
+    "event": "HE-001",
+    "task": "FSR",
+    "output": "Draft Functional Safety Requirement (FSR):\n\nThe electric power steering system shall maintain a maximum steering angle of 45 degrees within 150 ms after the ignition is turned on.\n\n[REQ-1] [REQ-3] [REQ-4]",
+    "quality_issues": [
+      "REQ-1: the word 'shall' is missing",
+      "REQ-3: no measurable value with unit (e.g. 200 ms, 1.5 Nm)"
+    ],
+    "passes_checker": false
+  },
+  {
+    "event": "HE-002",
+    "task": "safety_goal",
+    "output": "Safety Goal:\n\nAvoid the hazard caused by the malfunction Unintended assist torque without driver input.\n\nSafe state: assist torque ramped down to zero, EPS warning lamp on, and the driver keeps manual steering.\n\nFTTI: 200 ms\n\n[CITE SG-1, SG-2, [ITM-8]]",
+    "citations_ok": true,
+    "invalid_cites": [],
+    "has_safe_state": true,
+    "has_ftti": true
+  },
+  {
+    "event": "HE-002",
+    "task": "FSR",
+    "output": "Draft Functional Safety Requirement (FSR):\n\nThe electric power steering system shall maintain a maximum steering angle of 45 degrees within 150 ms after the ignition is turned on.\n\n[REQ-1] [REQ-3] [REQ-4]",
+    "quality_issues": [
+      "REQ-1: the word 'shall' is missing",
+      "REQ-3: no measurable value with unit (e.g. 200 ms, 1.5 Nm)"
+    ],
+    "passes_checker": false
+  },
+  {
+    "event": "HE-011",
+    "task": "safety_goal",
+    "output": "Draft Safety Goal:\n\nAvoid the hazard caused by the malfunction: \"Warning lamp not activated when assist is lost\".\n\nSafe state: The EPS ECU sends the warning lamp status, the assist torque ramped down to zero, EPS warning lamp on, and the driver keeps manual steering.\n\nFTTI: 500 ms\n\nCited from: SG-1, SG-2, [ITM-8]",
+    "citations_ok": true,
+    "invalid_cites": [],
+    "has_safe_state": true,
+    "has_ftti": true
+  },
+  {
+    "event": "HE-011",
+    "task": "FSR",
+    "output": "Draft Safety Goal:\n\nThe electric power steering system shall maintain a maximum steering angle of 45 degrees within 150 ms after the ignition is turned on.\n\n[SG-1] [REQ-1] [REQ-3] [REQ-4]",
+    "quality_issues": [
+      "REQ-1: the word 'shall' is missing",
+      "REQ-3: no measurable value with unit (e.g. 200 ms, 1.5 Nm)"
+    ],
+    "passes_checker": false
+  }
+]

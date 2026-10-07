@@ -1,0 +1,26 @@
+ITEM ITM-1 (Item overview)
+The item is the Electric Power Steering (EPS) system of a passenger car. This is a synthetic example written for an academic prototype; it is not taken from any OEM or standard. A column-mounted electric motor applies assist torque to the steering shaft. The assist level depends on the driver torque, vehicle speed and steering angle. The EPS ECU runs the assist control software, monitors the sensors and the motor drive, and communicates on the vehicle CAN bus. The mechanical link between steering wheel and road wheels is kept, so the driver can still steer manually when assist is lost, but needs much higher effort.
+
+ITEM ITM-2 (Function F1: Provide steering assist torque)
+The EPS ECU calculates a target assist torque from driver torque, vehicle speed and steering angle, and drives the motor to apply it. Assist is high at low speed (parking) and reduced at high speed. Normal vehicle speed range is 0 to 200 km/h.
+
+ITEM ITM-3 (Function F2: Measure driver steering torque)
+A torque sensor on the steering column measures the torque applied by the driver. The signal is used as the main input of the assist calculation. Two redundant channels are read, and the ECU compares them for plausibility.
+
+ITEM ITM-4 (Function F3: Active return to centre)
+After a turn, the EPS applies a small torque so that the steering wheel returns towards the straight-ahead position when the driver loosens the grip. The return torque depends on vehicle speed.
+
+ITEM ITM-5 (Function F4: Fault detection and driver warning)
+The EPS ECU monitors sensors, motor drive and internal software. When a fault is detected, the assist is reduced or switched off and the EPS warning lamp is activated so that the driver knows that steering effort will increase.
+
+ITEM ITM-6 (Function F5: Lane-keeping torque overlay)
+On request from the ADAS ECU, the EPS adds a small corrective torque to keep the vehicle in its lane. It is active only above 60 km/h. The driver can override it at any time by applying a torque above a defined threshold.
+
+ITEM ITM-7 (Operating situations)
+Typical operating situations are: parking and low-speed manoeuvres, urban driving at low to moderate speed, rural roads at medium speed, and highway driving at high speed on straight roads and in curves. Evasive manoeuvres can occur in any of these situations.
+
+ITEM ITM-8 (Interfaces and safe state)
+The EPS ECU receives vehicle speed and lane-keeping requests over CAN and sends the warning lamp status. The defined safe state is: assist torque ramped down to zero, EPS warning lamp on, and the driver keeps manual steering.
+
+ITEM ITM-9 (Assumptions and limitations)
+All severity, exposure and controllability ratings in this prototype are illustrative values for an academic exercise. They must be reviewed by a qualified functional safety engineer before any real use. The prototype does not claim ISO 26262 compliance.

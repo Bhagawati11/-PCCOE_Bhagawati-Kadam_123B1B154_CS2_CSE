@@ -1,0 +1,68 @@
+RULE SEV-1 (Severity S1)
+Class S1 means light or moderate injuries are expected for the hazardous event.
+
+RULE SEV-2 (Severity S2)
+Class S2 means severe injuries are expected, but survival of the persons involved is probable.
+
+RULE SEV-3 (Severity S3)
+Class S3 means life-threatening injuries are possible (survival uncertain) or fatal injuries are expected.
+
+RULE EXP-1 (Exposure E1)
+Class E1 means the operational situation is very rare. It occurs only in unusual circumstances.
+
+RULE EXP-2 (Exposure E2)
+Class E2 means the operational situation is rare. It occurs a few times in the life of a vehicle.
+
+RULE EXP-3 (Exposure E3)
+Class E3 means the operational situation occurs sometimes. It is met regularly but not on every trip.
+
+RULE EXP-4 (Exposure E4)
+Class E4 means the operational situation is frequent. It occurs on almost every trip or for a large share of driving time.
+
+RULE CTL-1 (Controllability C1)
+Class C1 means almost all drivers can easily keep control and avoid harm after the malfunction.
+
+RULE CTL-2 (Controllability C2)
+Class C2 means most drivers can keep control and avoid harm, but some may not.
+
+RULE CTL-3 (Controllability C3)
+Class C3 means most drivers cannot keep control, or control is very difficult after the malfunction.
+
+RULE ASIL-1 (ASIL determination)
+The ASIL is determined only by a deterministic rule, never by the language model. If S, E or C is 0 the result is QM. Otherwise add the class numbers S+E+C. A sum of 10 gives ASIL D, 9 gives ASIL C, 8 gives ASIL B, 7 gives ASIL A, and 6 or less gives QM.
+
+RULE ASIL-2 (QM events)
+A hazardous event rated QM needs no safety goal. It is still recorded in the HARA worksheet so the decision stays traceable.
+
+RULE HAZ-1 (Guideword method)
+Hazard identification takes each item function and applies guidewords such as no or loss, unintended, too much, too little, too late, wrong direction, and stuck or intermittent. Each result is a malfunctioning behaviour.
+
+RULE HAZ-2 (Hazardous event)
+A hazardous event is a malfunctioning behaviour combined with an operational situation. Each hazardous event gets its own S, E and C rating with a written rationale.
+
+RULE SG-1 (Safety goal wording)
+A safety goal is written as: Avoid the hazard caused by the malfunction. It states the ASIL, the safe state and the fault tolerant time interval (FTTI).
+
+RULE SG-2 (Safety goal coverage)
+Every approved hazardous event with ASIL A, B, C or D needs at least one safety goal. The safety goal takes the ASIL of its hazardous event.
+
+RULE REQ-1 (Atomic wording)
+A safety requirement is one sentence that uses the word shall exactly once.
+
+RULE REQ-2 (No vague words)
+A safety requirement avoids vague words such as appropriate, adequate, fast, sufficient, reasonable, and/or, etc.
+
+RULE REQ-3 (Measurable and ASIL)
+A safety requirement states a measurable value with a unit, for example a time in ms or a torque in Nm, and carries the ASIL of its parent.
+
+RULE REQ-4 (Parent and allocation)
+A functional safety requirement (FSR) refers to its parent safety goal and is allocated to an architecture element. A technical safety requirement (TSR) refers to its parent FSR.
+
+RULE REQ-5 (Verification)
+Every safety requirement names a verification method, for example HIL fault injection, unit test or review.
+
+RULE TRC-1 (Traceability completeness)
+Traceability is complete when every approved hazardous event with an ASIL has a safety goal, every safety goal has an FSR, every FSR has a TSR, every requirement has a verification method, and ASIL values are inherited without change.
+
+RULE GOV-1 (Human approval)
+All AI output is a draft. A qualified engineer must approve or reject every hazardous event, safety goal and requirement. The system never approves automatically.

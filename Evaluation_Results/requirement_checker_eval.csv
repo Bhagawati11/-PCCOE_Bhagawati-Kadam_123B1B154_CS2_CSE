@@ -1,0 +1,11 @@
+text,expected_pass,got_pass,issues
+The EPS shall detect a total loss of assist torque and activate the warning lamp within 200 ms.,True,True,
+The EPS shall switch off assist torque within 100 ms after unintended torque above 1.5 Nm is detected.,True,True,
+The EPS software shall set the warning lamp output within 50 ms after the fault flag is set.,True,True,
+The EPS should detect a loss of assist torque quickly.,False,False,"REQ-1: the word 'shall' is missing | REQ-2: vague term 'quickly' | REQ-3: no measurable value with unit (e.g. 200 ms, 1.5 Nm)"
+The EPS shall appropriately limit assist torque.,False,False,"REQ-3: no measurable value with unit (e.g. 200 ms, 1.5 Nm)"
+The EPS shall detect the fault within 200 ms and the EPS shall warn the driver.,False,False,REQ-1: more than one 'shall' (split into atomic requirements)
+The EPS shall detect the fault within 200 ms.,False,False,REQ-4: FSR is not allocated to an architecture element
+The EPS software shall monitor the torque sensor within 10 ms.,False,False,REQ-5: no verification method
+The EPS software shall monitor the torque sensor within 10 ms.,False,False,REQ-3: ASIL missing or invalid
+The EPS shall limit the overlay torque to 2 Nm and end it within 300 ms after driver override.,False,False,REQ-4: no parent reference

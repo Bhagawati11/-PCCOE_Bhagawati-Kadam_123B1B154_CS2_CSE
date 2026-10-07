@@ -1,0 +1,33 @@
+{
+  "asil_rule": {
+    "anchor_cases": 23,
+    "correct": 23,
+    "accuracy": 1.0
+  },
+  "library_consistency": {
+    "entries": 14,
+    "asil_consistent": 14
+  },
+  "requirement_checker": {
+    "cases": 10,
+    "correct": 10,
+    "accuracy": 1.0
+  },
+  "traceability": {
+    "injected_gaps": 5,
+    "detected": 5,
+    "false_alarms": 0,
+    "completeness_pct_on_test_set": 78.3
+  },
+  "retrieval": {
+    "questions": 6,
+    "hit_rate_top3": 1.0,
+    "hit_rate_top1": 0.833
+  },
+  "llm_drafts": {
+    "safety_goals": 3,
+    "citations_valid": 3,
+    "fsr_drafts": 3,
+    "fsr_pass_checker": 0
+  }
+}

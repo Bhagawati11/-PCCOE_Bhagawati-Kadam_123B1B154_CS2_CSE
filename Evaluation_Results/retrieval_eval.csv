@@ -1,0 +1,7 @@
+question,expected_id,hit_in_top3,top1,retrieved,latency_s
+What is the hazard if the steering assist torque is lost completely while cornering on a highway?,HE-001,True,HE-002,HE-002(0.54); HE-005(0.53); HE-001(0.51),0.069
+Steering pulls by itself on a straight highway without driver input,HE-002,True,HE-002,HE-002(0.42); HE-005(0.37); HE-001(0.37),0.036
+Torque sensor signal drops out intermittently and assist oscillates,HE-008,True,HE-008,HE-008(0.42); HE-007(0.31); HE-011(0.23),0.033
+Warning lamp does not light when the power steering assist fails,HE-011,True,HE-011,HE-011(0.63); HE-007(0.41); HE-008(0.39),0.01
+Lane keeping torque cannot be overridden by the driver,HE-014,True,HE-014,HE-014(0.62); HE-013(0.62); HE-003(0.44),0.01
+Steering wheel does not return to centre after a low speed turn,HE-009,True,HE-009,HE-009(0.54); HE-010(0.45); HE-005(0.36),0.034
